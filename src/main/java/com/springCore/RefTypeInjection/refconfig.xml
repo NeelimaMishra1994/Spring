@@ -3,10 +3,18 @@
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://www.springframework.org/schema/beans
   https://www.springframework.org/schema/beans/spring-beans.xsd">
-  <!-- if you have set field using property that means you are using setter injection , 
-  Ways to inject properties in setter for primitive datatype-->
-   <!--1st way to set property in bean using value as tag element-->
-  <bean class="com.springCore.RefTypeInjection.B" name="std"></bean>
-  
+	  <bean class="com.springCore.RefTypeInjection.B" name="bref">
+	 	 <property name="y" value="90"/>
+	  </bean>
+	  	<!-- it means when it will create object of A, it will assign the 
+	  	property X to 10 and in property obj of A it will add reference of B -->
+	  <bean class="com.springCore.RefTypeInjection.A" name="aref">
+	  	<property name="X" value="10"/>
+	  	<property name="obj">
+	  		<ref bean="bref"/>
+	  	</property>
+	  	</bean>
+	  
 </beans>
+ 
 

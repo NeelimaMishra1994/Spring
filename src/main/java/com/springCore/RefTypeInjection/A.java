@@ -3,6 +3,7 @@ package com.springCore.RefTypeInjection;
 public class A {
 	private int X;
 	private B obj;
+	
 	public int getX() {
 		return X;
 	}
