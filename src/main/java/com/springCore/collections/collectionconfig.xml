@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans
+  https://www.springframework.org/schema/beans/spring-beans.xsd">
+  <!-- if you have set field using property that means you are using setter injection , 
+  Ways to inject properties in setter for primitive datatype-->
+   <!--1st way to set property in bean using value as tag element-->
+  <bean class="com.springCore.collections.Employee" name="emp"> 
+  <property name="Name" value="Radhe"/>
+  <property name="phones">
+	  <list>
+	 	 <value>123</value>
+	 	 <value>456</value>
+	 	 <value>678899</value>
+	 	 <null/>
+	  </list>
+  </property>
+  <property name="addresses">
+  	<set>
+  		<value>London</value>
+  		<value>Scotland</value>
+  		<value>Uk</value>
+  		<value>USA</value>
+  	</set>
+  </property>
+  <property name="courses">
+	  <map>
+	  <entry key="java" value="2months"/>
+	  <entry key="C" value="4months"/>
+	  <entry key="C++" value="6months"/>
+	  </map>
+  </property>
+  
+  </bean>
+</beans>
+
+

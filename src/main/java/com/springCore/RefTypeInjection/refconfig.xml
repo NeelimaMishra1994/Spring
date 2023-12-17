@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans
+  https://www.springframework.org/schema/beans/spring-beans.xsd">
+  <!-- if you have set field using property that means you are using setter injection , 
+  Ways to inject properties in setter for primitive datatype-->
+   <!--1st way to set property in bean using value as tag element-->
+  <bean class="com.springCore.RefTypeInjection.B" name="std"></bean>
+  
+</beans>
+
