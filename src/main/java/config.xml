@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans
+  https://www.springframework.org/schema/beans/spring-beans.xsd">
+  <!-- if you have set field using property that means you are using setter injection , 
+  Ways to inject properties in setter for primitive datatype-->
+   <!--1st way to set property in bean using value as tag element-->
+  <bean class="com.springCore.Student" name="std"> 
+  <property name="studentID">
+   <value>12</value>
+  </property>
+  <property name="studentName">
+  <value>Neelima</value></property>
+  <property name="studentAddress">
+  <value>United Kingdom</value>
+  </property>
+  </bean>
+  <!-- Another way to set property in bean using value as attribute-->
+  <bean class="com.springCore.Student" name="std1"> 
+  <property name="studentID" value="14"/>
+  <property name="studentName" value="Harish"/>
+  <property name="studentAddress" value="United Kingdom"/>
+  </bean>
+
+<!-- Another way to set property in bean using P schema but for this you should have p schema in your bean class-->
+ <!--  <bean class="com.springCore.Student" name="std2" p:studentID="16" p:studentName="Mishra" p:studentAddress="united kingdom"/>-->
+</beans>
+
+
