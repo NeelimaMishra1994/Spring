@@ -10,10 +10,13 @@
 	  	property X to 10 and in property obj of A it will add reference of B -->
 	  <bean class="com.springCore.RefTypeInjection.A" name="aref">
 	  	<property name="X" value="10"/>
-	  	<property name="obj">
+	  	<!-- <property name="obj">
 	  		<ref bean="bref"/>
-	  	</property>
+	  	</property> -->
+	  	<property name="obj" ref="bref"/>
 	  	</bean>
+	  	<!-- <bean class="com.springCore.RefTypeInjection.A" name="aref" p:X="33" p:obj="bref/"> -->
+	  	
 	  
 </beans>
  
