@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans
+  https://www.springframework.org/schema/beans/spring-beans.xsd">
+  
+   <bean class="com.springCore.constructorInjection.Certificate" name="cer">
+   		<constructor-arg value="Aws Certification"/>
+   </bean>
+   <!-- <bean class="com.springCore.constructorInjection.Certificate" name="cer" c:name="aws certification"> -->
+   <!-- in constructor you can use c schema -->
+   		
+  
+  <bean class="com.springCore.constructorInjection.Person" name="person"> 
+  	<constructor-arg value="Neelima"/>
+  	<constructor-arg value="12" type="int"/><!-- passing by value attribute -->
+  	<constructor-arg ref="cer"/> <!-- passing by refrence -->
+  </bean>
+  
+</beans>
+
+
