@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>    
+    <beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+         http://www.springframework.org/schema/util
+         http://www.springframework.org/schema/util/spring-util-3.0.xsd">
+    
+   <!--  Standalone List -->
+   <util:list list-class="java.util.LinkedList" id="allNames">
+	   <value>Harish</value>
+	   		<value>Neelima</value>
+	   		<value>Khangar</value>
+	   		<value>Mishra</value>
+	   </util:list>
+	   <util:map map-class="java.util.TreeMap" id="feeStructureid">
+	   		<entry key="java" value="8000"></entry>
+	   		<entry key="C" value="9000"></entry>
+	   		<entry key="Python" value="10000"></entry>
+	   </util:map>
+	   
+	   <util:properties id="dbConfig">
+	   	<prop key="driver">com.mysql.jdbc.driver</prop>
+	   	<prop key="userName">Neelima</prop>
+	   	<prop key="password">Password</prop>
+	   </util:properties>
+  
+  <bean class="com.springCore.standAloneCollections.Person" name="person">
+  <!--  <property name="names">
+   	<ref bean="allNames"/> this is the standalone collection you can use it anywhere using this way ,this is 1st way
+   </property> -->
+   <property name="names" ref="allNames"></property> <!-- this is second way -->
+    <property name="feeStructure" ref="feeStructureid"></property>
+   <property name="properties" ref="dbConfig"></property>
+  </bean> 
+ 
+	  
+	  
+</beans>
+
+
