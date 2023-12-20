@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:context="http://www.springframework.org/schema/context"
+  xsi:schemaLocation="
+    http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+    http://www.springframework.org/schema/aop
+    http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+    http://www.springframework.org/schema/tx
+    http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+  
+  <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"></bean> 
+  
+	  <bean class="com.springCore.Autowiring.Address" name="address"> 
+	  	<property name="street" value="craigleith"/>
+	  	<property name="city" value="Edinburgh"/>
+	  </bean>
+	   <bean class="com.springCore.Autowiring.Emp" name="emp" autowire="byName"> <!-- byName check the variable ref name and if there is any bean
+	   																				 With same name as ref name, if found
+	   																				 matching name it will inject  that object,it will call setter method
+	   																				 but checks name -->
+	  </bean> 
+	  <bean class="com.springCore.Autowiring.Emp" name="emp" autowire="byType"> <!-- byType will check which type of refrence variable you have 
+	  																			taken and in config file if there is any object of same type it 
+	  																			will inject theat object -->
+	  </bean>
+	  
+	  <bean class="com.springCore.Autowiring.Emp" name="emp" autowire="constructor"></bean>
+	  
+</beans>
+
+
